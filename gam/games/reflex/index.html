@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexo Rápido - MiniPlay Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <button id="back-btn" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Voltar ao Hub
+            </button>
+            <h1><i class="fas fa-bolt"></i> Reflexo Rápido</h1>
+            <div class="stats">
+                <div class="reaction-time">
+                    <span>Tempo: </span>
+                    <span id="reaction-time">0ms</span>
+                </div>
+                <div class="best-score">
+                    <span>Recorde: </span>
+                    <span id="best-score">0ms</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area" id="game-area">
+                <div class="target" id="target"></div>
+                <div class="ready-screen" id="ready-screen">
+                    <h2>Prepare-se!</h2>
+                    <p>Clique no botão quando ele aparecer</p>
+                </div>
+                <div class="wait-screen" id="wait-screen">
+                    <h2>Aguarde...</h2>
+                    <p>Um botão aparecerá em breve</p>
+                </div>
+            </div>
+            
+            <div class="results" id="results">
+                <h2>Seu tempo: <span id="result-time">0</span>ms</h2>
+                <p id="result-message"></p>
+                <button id="next-round-btn">Próxima Rodada</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

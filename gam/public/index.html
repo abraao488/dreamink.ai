@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniPlay Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <!-- Player Profile Modal -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Perfil do Jogador</h2>
+            <div class="profile-form">
+                <label for="player-name">Nome:</label>
+                <input type="text" id="player-name" placeholder="Digite seu nome">
+                <label for="player-avatar">Avatar:</label>
+                <select id="player-avatar">
+                    <option value="fa-user">👤 Usuário</option>
+                    <option value="fa-robot">🤖 Robô</option>
+                    <option value="fa-crown">👑 Coroa</option>
+                    <option value="fa-gamepad">🎮 Controle</option>
+                    <option value="fa-star">⭐ Estrela</option>
+                </select>
+                <button id="save-profile">Salvar Perfil</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-gamepad"></i> MiniPlay Hub</h1>
+            <div class="header-controls">
+                <button id="open-profile" class="profile-btn">
+                    <i class="fas fa-user"></i> 
+                    <span id="player-display">Perfil</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Pesquisar jogos...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Categorias</h2>
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="reflexo">Reflexo</button>
+                <button class="category-btn" data-category="memoria">Memória</button>
+                <button class="category-btn" data-category="habilidade">Habilidade</button>
+                <button class="category-btn" data-category="velocidade">Velocidade</button>
+                <button class="category-btn" data-category="quebra-cabeca">Quebra-cabeça</button>
+            </div>
+        </section>
+
+        <section class="games-grid" id="games-grid">
+            <!-- Games will be loaded here dynamically -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 MiniPlay Hub. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

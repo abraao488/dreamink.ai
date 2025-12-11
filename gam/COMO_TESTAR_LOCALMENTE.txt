@@ -1,0 +1,141 @@
+# Como Testar o MiniPlay Hub Localmente
+
+## Método 1: Abrir Diretamente no Navegador (Mais Simples)
+
+1. **Navegue até a pasta do projeto**
+   - Abra o File Explorer
+   - Vá até a pasta onde você salvou o MiniPlay Hub
+
+2. **Abra o hub**
+   - Encontre o arquivo `public/index.html`
+   - Clique duas vezes nele ou clique com o botão direito e selecione "Abrir com" e escolha seu navegador preferido
+
+3. **Teste os jogos**
+   - Clique em "Jogar" em qualquer jogo para abri-lo
+   - Cada jogo será aberto em uma nova página
+
+## Método 2: Usando um Servidor Local (Recomendado para Desenvolvimento)
+
+### Usando Python (se tiver instalado)
+
+1. **Abra o Prompt de Comando ou PowerShell**
+   - Pressione Win + R, digite "cmd" e pressione Enter
+
+2. **Navegue até a pasta do projeto**
+   ```bash
+   cd caminho\para\a\pasta\do\projeto
+   ```
+
+3. **Inicie o servidor**
+   - Para Python 3:
+     ```bash
+     python -m http.server 8000
+     ```
+   - Para Python 2:
+     ```bash
+     python -m SimpleHTTPServer 8000
+     ```
+
+4. **Acesse no navegador**
+   - Abra seu navegador e vá para:
+     ```
+     http://localhost:8000/public/index.html
+     ```
+
+### Usando Node.js (se tiver instalado)
+
+1. **Instale o http-server (primeiro uso)**
+   ```bash
+   npm install -g http-server
+   ```
+
+2. **Inicie o servidor**
+   ```bash
+   http-server
+   ```
+
+3. **Acesse no navegador**
+   - O terminal mostrará o endereço (geralmente http://localhost:8080)
+   - Navegue até a pasta `/public` e abra `index.html`
+
+## Método 3: Extensões do VS Code
+
+Se estiver usando Visual Studio Code:
+
+1. **Instale a extensão "Live Server"**
+   - Vá para a aba de extensões (Ctrl+Shift+X)
+   - Procure por "Live Server" e instale
+
+2. **Inicie o servidor**
+   - Clique com o botão direito em `public/index.html`
+   - Selecione "Open with Live Server"
+
+## Testando Funcionalidades
+
+### Perfil do Jogador
+- Clique no botão "Perfil" no canto superior direito
+- Insira um nome e selecione um avatar
+- Salve e veja as mudanças refletidas
+
+### Sistema de Categorias
+- Clique nos botões de categoria para filtrar os jogos
+- "Todos" mostra todos os jogos
+- Cada categoria mostra apenas os jogos daquela categoria
+
+### Pesquisa de Jogos
+- Use o campo de pesquisa para encontrar jogos pelo nome ou descrição
+
+### Jogos
+Teste cada jogo para verificar:
+
+1. **Cobrinha**
+   - Use as setas para mover
+   - Tente comer a comida vermelha
+   - Evite bater nas paredes ou em si mesmo
+
+2. **Jogo da Memória**
+   - Clique nas cartas para virá-las
+   - Encontre pares iguais
+   - Tente completar com o menor número de movimentos
+
+3. **Flappy Cube**
+   - Clique ou pressione Espaço para pular
+   - Evite os tubos
+   - Tente passar pelo máximo de tubos possível
+
+4. **Reflexo Rápido**
+   - Clique em "Prepare-se!" para começar
+   - Quando o botão vermelho aparecer, clique nele rapidamente
+   - Tente melhorar seu tempo
+
+5. **2048 Lite**
+   - Use as setas para mover os blocos
+   - Combine blocos iguais para criar blocos maiores
+   - Tente alcançar o bloco 2048
+
+## Dicas de Teste
+
+1. **Teste em diferentes navegadores** - Chrome, Firefox, Edge
+2. **Teste em dispositivos móveis** - Use o modo responsivo do navegador
+3. **Verifique o armazenamento local** - Os recordes devem ser salvos
+4. **Teste todas as funcionalidades** - Cada botão e interação
+5. **Verifique erros no console** - Pressione F12 e veja a aba Console
+
+## Problemas Comuns e Soluções
+
+1. **Páginas não carregam**
+   - Verifique se os caminhos dos arquivos estão corretos
+   - Certifique-se de estar abrindo `index.html` e não outros arquivos
+
+2. **Estilos não aparecem**
+   - Verifique se o link para `style.css` está correto
+   - Confirme se o arquivo CSS existe
+
+3. **Funcionalidades não funcionam**
+   - Verifique se o link para `script.js` está correto
+   - Confirme se o arquivo JavaScript existe
+   - Veja erros no console do navegador (F12)
+
+4. **Dados não são salvos**
+   - Verifique se o navegador permite localStorage
+   - Confirme se não há erros no JavaScript

@@ -1,0 +1,84 @@
+# Como Editar os Jogos Existentes
+
+## Estrutura dos Jogos
+
+Cada jogo está em sua própria pasta dentro de `/games`. Cada jogo tem três arquivos principais:
+
+1. `index.html` - Estrutura e conteúdo do jogo
+2. `style.css` - Estilos e aparência do jogo
+3. `script.js` - Lógica e funcionalidade do jogo
+
+## Editando o HTML
+
+O arquivo HTML contém a estrutura básica do jogo. Você pode adicionar novos elementos, modificar textos ou reorganizar a interface.
+
+Exemplo de estrutura comum:
+```html
+<header>
+    <!-- Botão de voltar e título -->
+</header>
+
+<main>
+    <!-- Área principal do jogo -->
+</main>
+```
+
+## Editando o CSS
+
+O arquivo CSS controla a aparência do jogo. Você pode modificar cores, tamanhos, espaçamentos e animações.
+
+Variáveis CSS comuns:
+```css
+:root {
+    --primary-color: #6a5acd;    /* Cor principal */
+    --secondary-color: #9370db;  /* Cor secundária */
+    --accent-color: #ba55d3;     /* Cor de destaque */
+}
+```
+
+## Editando o JavaScript
+
+O arquivo JavaScript controla a lógica do jogo. Você pode modificar regras, adicionar funcionalidades ou corrigir bugs.
+
+Estrutura típica:
+```javascript
+// Constantes do jogo
+const GAME_CONSTANT = value;
+
+// Estado do jogo
+let gameState = {};
+
+// Elementos DOM
+const gameElement = document.getElementById('element-id');
+
+// Funções do jogo
+function gameFunction() {
+    // Lógica do jogo
+}
+
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+    // Configuração inicial
+});
+```
+
+## Testando Alterações
+
+1. Salve suas alterações
+2. Abra o arquivo `index.html` do jogo no navegador
+3. Recarregue a página para ver as mudanças
+
+## Dicas Importantes
+
+1. **Mantenha a consistência** - Siga o mesmo padrão de design dos outros jogos
+2. **Teste sempre** - Verifique se suas alterações funcionam como esperado
+3. **Faça backups** - Antes de grandes mudanças, salve uma cópia dos arquivos originais
+4. **Comente seu código** - Adicione comentários explicando funções complexas
+5. **Use o console** - Utilize `console.log()` para depurar problemas
+
+## Problemas Comuns
+
+1. **Erros de caminho** - Certifique-se de que os links para CSS e JS estão corretos
+2. **IDs duplicados** - Cada elemento deve ter um ID único
+3. **Escopo de variáveis** - Declare variáveis com `let` ou `const` no escopo correto
+4. **Eventos não funcionando** - Verifique se os seletores estão corretos e os eventos estão registrados

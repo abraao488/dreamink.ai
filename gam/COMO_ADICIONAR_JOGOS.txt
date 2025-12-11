@@ -1,0 +1,67 @@
+# Como Adicionar Novos Jogos ao MiniPlay Hub
+
+## Estrutura de um Jogo
+
+Para adicionar um novo jogo, siga esta estrutura de diretório:
+
+```
+/games
+  /nome-do-jogo
+    index.html
+    style.css
+    script.js
+```
+
+## Passos para Adicionar um Novo Jogo
+
+1. **Crie uma nova pasta** dentro de `/games` com o nome do seu jogo (use apenas letras minúsculas e hífens)
+
+2. **Crie os arquivos básicos** do jogo:
+   - `index.html` - Estrutura do jogo
+   - `style.css` - Estilos do jogo
+   - `script.js` - Lógica do jogo
+
+3. **Siga o padrão de cabeçalho** nos arquivos HTML:
+   ```html
+   <header>
+       <button id="back-btn" class="back-btn">
+           <i class="fas fa-arrow-left"></i> Voltar ao Hub
+       </button>
+       <h1><i class="fas fa-[icone]"></i> Nome do Jogo</h1>
+       <!-- Outros elementos do cabeçalho -->
+   </header>
+   ```
+
+4. **Adicione o botão de voltar** no JavaScript:
+   ```javascript
+   document.getElementById('back-btn').addEventListener('click', () => {
+       window.location.href = '../../public/index.html';
+   });
+   ```
+
+5. **Registre o jogo no hub** adicionando-o ao array `games` em `/public/script.js`:
+   ```javascript
+   {
+       id: 'nome-do-jogo',
+       title: 'Nome do Jogo',
+       icon: 'fa-[icone]',
+       category: 'categoria',
+       description: 'Descrição do jogo'
+   }
+   ```
+
+## Categorias Disponíveis
+
+- reflexo
+- memoria
+- habilidade
+- velocidade
+- quebra-cabeca
+
+## Ícones
+
+Use ícones do Font Awesome: https://fontawesome.com/icons
+
+## Testando Localmente
+
+Abra o arquivo `/public/index.html` no seu navegador para testar o hub e os jogos.
